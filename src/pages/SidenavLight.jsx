@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import Footer from '../components/Footer';
 function SidenavLight() {
   return (
     <div>
@@ -30,10 +31,10 @@ function SidenavLight() {
             <div className="sb-sidenav-menu">
               <div className="nav">
                 <div className="sb-sidenav-menu-heading">Core</div>
-                <a className="nav-link" href="index.html">
+                <Link  className="nav-link" to='/'>
                   <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                   Dashboard
-                </a>
+                  </Link>
                 <div className="sb-sidenav-menu-heading">Interface</div>
                 <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                   <div className="sb-nav-link-icon"><i className="fas fa-columns"></i></div>
@@ -42,8 +43,8 @@ function SidenavLight() {
                 </a>
                 <div className="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                   <nav className="sb-sidenav-menu-nested nav">
-                    <a className="nav-link" href="layout-static.html">Static Navigation</a>
-                    <a className="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                  <Link to='/staticLayout' className="nav-link">Static Navigation</Link>
+                  <Link to='/sidenavbar' className="nav-link">Light Sidenav</Link>
                   </nav>
                 </div>
                 <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
@@ -59,9 +60,9 @@ function SidenavLight() {
                     </a>
                     <div className="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordionPages">
                       <nav className="sb-sidenav-menu-nested nav">
-                        <a className="nav-link" href="login.html">Login</a>
-                        <a className="nav-link" href="register.html">Register</a>
-                        <a className="nav-link" href="password.html">Forgot Password</a>
+                      <Link to='/login' className="nav-link">Login</Link>
+                        <Link to='/register' className="nav-link">Register</Link>
+                        <Link to='/password' className="nav-link">Forgot Password</Link>
                       </nav>
                     </div>
                     <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
@@ -84,14 +85,14 @@ function SidenavLight() {
                   </nav>
                 </div>
                 <div className="sb-sidenav-menu-heading">Addons</div>
-                <a className="nav-link" href="charts.html">
+                <Link  className="nav-link" to='/charts'>
                   <div className="sb-nav-link-icon"><i className="fas fa-chart-area"></i></div>
                   Charts
-                </a>
-                <a className="nav-link" href="tables.html">
+                  </Link>
+                <Link  className="nav-link" to='/tables'>
                   <div className="sb-nav-link-icon"><i className="fas fa-table"></i></div>
                   Tables
-                </a>
+                </Link>
               </div>
             </div>
             <div className="sb-sidenav-footer">
@@ -121,18 +122,7 @@ function SidenavLight() {
               </div>
             </div>
           </main>
-          <footer className="py-4 bg-light mt-auto">
-            <div className="container-fluid px-4">
-              <div className="d-flex align-items-center justify-content-between small">
-                <div className="text-muted">Copyright &copy; Your Website 2023</div>
-                <div>
-                  <a href="#">Privacy Policy</a>
-                  &middot;
-                  <a href="#">Terms &amp; Conditions</a>
-                </div>
-              </div>
-            </div>
-          </footer>
+          <Footer/>
         </div>
       </div>
     </div>

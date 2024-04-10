@@ -12,6 +12,8 @@ import Error500 from './pages/Error500'
 import Register from './pages/Register'
 import StaticNavigation from './pages/StaticNavigation'
 import SidenavLight from './pages/SidenavLight'
+import Tables from './pages/Tables'
+import Charts from './pages/Charts'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -28,6 +30,8 @@ function App() {
         <Route path='/error500' element={<Error500/>}/>
         <Route path='/staticLayout' element={<StaticNavigation/>}/>
         <Route path='/sidenavbar' element={<SidenavLight/>}/>
+        <Route path='/tables' element={<Tables/>}  />
+        <Route path='/charts' element={<Charts/>}  />
         <Route path='*' element={<Error404/>}/>
       </Routes>
     </>

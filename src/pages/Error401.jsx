@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import Footer from '../components/Footer';
 function Error401() {
   return (
     <div>
@@ -24,18 +25,7 @@ function Error401() {
           </main>
         </div>
         <div id="layoutError_footer">
-          <footer className="py-4 bg-light mt-auto">
-            <div className="container-fluid px-4">
-              <div className="d-flex align-items-center justify-content-between small">
-                <div className="text-muted">Copyright &copy; Your Website 2023</div>
-                <div>
-                  <a href="#">Privacy Policy</a>
-                  &middot;
-                  <a href="#">Terms &amp; Conditions</a>
-                </div>
-              </div>
-            </div>
-          </footer>
+          <Footer/>
         </div>
       </div>
     </div>
